@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mile AI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white border-r border-gray-200 flex flex-col">
+            <div class="p-4 border-b border-gray-200 flex items-center space-x-2">
+                <button class="p-2 hover:bg-gray-100 rounded">
+                    <i data-lucide="menu"></i>
+                </button>
+                <h1 class="text-purple-600 text-xl font-semibold">Mile AI</h1>
+            </div>
+            
+            <nav class="flex-1 p-4 space-y-2">
+                <a href="#" class="nav-item">
+                    <i data-lucide="home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="podcast"></i>
+                    <span>Podcasts</span>
+                    <span class="text-xs bg-green-100 text-green-800 px-2 rounded">New</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <i data-lucide="help-circle"></i>
+                    <span>Quizzes</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="book-open"></i>
+                    <span>Summaries</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="user"></i>
+                    <span>Tutor</span>
+                </a>
+            </nav>
+
+            <div class="p-4">
+                <div class="text-center text-sm text-gray-500">
+                    <p>💜 Earn with Mile AI</p>
+                    <p>contact@support.mile.ai</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Top Bar -->
+            <div class="bg-white border-b border-gray-200 p-4 flex justify-between items-center">
+                <p class="text-gray-600">Welcome!</p>
+                <div class="flex items-center space-x-4">
+                    <!-- <button class="px-3 py-1 rounded border hover:bg-gray-50">EN</button> -->
+                    <button class="p-2 hover:bg-gray-100 rounded">
+                        <i data-lucide="sun"></i>
+                    </button>
+                    <button class="p-2 hover:bg-gray-100 rounded">
+                        <i data-lucide="user-circle"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="flex-1 p-8">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-800">Generate Quiz</h2>
+                    <p class="text-gray-600 mt-2">Generate a brand new quiz from your study material in seconds!</p>
+
+                    <!-- Upload Options -->
+                    <div class="mt-6 flex space-x-4">
+                        <button class="upload-btn primary">
+                            <i data-lucide="file"></i>
+                            <span>File</span>
+                        </button>
+                        <button class="upload-btn">
+                            <i data-lucide="type"></i>
+                            <span>Text</span>
+                        </button>
+                        <button class="upload-btn">
+                            <i data-lucide="link"></i>
+                            <span>Link</span>
+                        </button>
+                        <button class="upload-btn">
+                            <i data-lucide="image"></i>
+                            <span>Image</span>
+                        </button>
+                        <button class="upload-btn">
+                            <i data-lucide="youtube"></i>
+                            <span>YouTube</span>
+                        </button>
+                    </div>
+
+                    <!-- Drop Zone -->
+                    <div id="dropZone" class="mt-6 border-2 border-dashed border-gray-300 rounded-lg p-12">
+                        <div class="text-center">
+                            <i data-lucide="upload" class="mx-auto h-12 w-12 text-gray-400"></i>
+                            <p class="mt-2 text-gray-600">Drop a file here, or click to select a file</p>
+                        </div>
+                    </div>
+                    <!-- Thêm nút bên dưới khu vực kéo thả file -->
+                    <button class="mt-4 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Sidebar -->
+        <div class="w-80 border-l border-gray-200 bg-white p-6">
+            <div class="space-y-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="settings"></i>
+                        <span class="font-medium">Settings</span>
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="eye"></i>
+                            <span>Visibility</span>
+                        </div>
+                        <span class="status-badge">Public</span>
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="globe"></i>
+                        <span>Language</span>
+                    </div>
+                    <button class="dropdown-btn">
+                        <span>Detect language</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="setting-item">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="help-circle"></i>
+                        <span>Question type</span>
+                    </div>
+                    <button class="dropdown-btn">
+                        <span>Mixed</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="setting-item">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="hash"></i>
+                        <span>Number of questions</span>
+                    </div>
+                    <button class="dropdown-btn">
+                        <span>Auto</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="setting-item">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="message-square"></i>
+                        <span>Feedback</span>
+                    </div>
+                    <button class="dropdown-btn">
+                        <span>Quiz mode</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="setting-item">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="users"></i>
+                        <span>Groups</span>
+                    </div>
+                    <button class="dropdown-btn">
+                        <span>No groups available</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

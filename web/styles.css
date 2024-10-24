@@ -1,0 +1,88 @@
+/* Navigation Items */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #f3f4f6;
+}
+
+.nav-item.active {
+    background-color: #f3f4f6;
+}
+
+/* Upload Buttons */
+.upload-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    transition: background-color 0.2s;
+}
+
+.upload-btn:hover {
+    background-color: #e5e7eb;
+}
+
+.upload-btn.primary {
+    background-color: #7c3aed;
+    color: white;
+}
+
+.upload-btn.primary:hover {
+    background-color: #6d28d9;
+}
+
+/* Drop Zone */
+#dropZone {
+    transition: border-color 0.2s;
+}
+
+#dropZone.drag-over {
+    border-color: #7c3aed;
+}
+
+/* Settings */
+.setting-item {
+    margin-bottom: 1.5rem;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    background-color: #dcfce7;
+    color: #166534;
+    border-radius: 0.25rem;
+}
+
+.dropdown-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.dropdown-btn:hover {
+    background-color: #f9fafb;
+}
+
+/* Utilities */
+.space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+.space-y-6 > * + * {
+    margin-top: 1.5rem;
+}

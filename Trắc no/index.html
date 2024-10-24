@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trắc nghiệm Mile AI</title>
+    <link rel="stylesheet" href="mau.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="progress-container">
+            <button id="back-btn" style="display: none;">Quay lại</button>
+            <div class="progress">
+                <span>Câu hỏi <span id="current-question">1</span>/<span id="total-questions">5</span></span>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width: 20%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="quiz"></div>
+        <button id="submit-btn">Trả lời</button>
+        <button id="skip-btn">Bỏ qua</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
